@@ -15,7 +15,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
-$wgShowExceptionDetails = true;
+$wgShowExceptionDetails = getenv('SHOW_EXCEPTIONS');
 
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
