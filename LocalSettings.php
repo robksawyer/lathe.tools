@@ -141,8 +141,6 @@ wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
-wfLoadExtension( 'LocalS3Repo' );
-wfLoadExtension( 'HTMLets' );
 
 
 # End of automatically generated settings.
