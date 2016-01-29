@@ -141,7 +141,44 @@ wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
+wfLoadExtension( 'LocalS3Repo' );
+wfLoadExtension( 'HTMLets' );
 
 
 # End of automatically generated settings.
 # Add more configuration options below.
+
+// s3 filesystem repo
+$wgUploadDirectory = 'wiki-images';
+$wgUploadS3Bucket = getenv('S3_BUCKET_NAME');
+$wgUploadS3SSL = false; // true if SSL should be used
+$wgPublicS3 = true; // true if public, false if authentication should be used
+$wgS3BaseUrl = "http".($wgUploadS3SSL?"s":"")."://s3.amazonaws.com/$wgUploadS3Bucket";
+$wgUploadBaseUrl = "$wgS3BaseUrl/$wgUploadDirectory";
+$wgLocalFileRepo = array(
+	'class' => 'LocalS3Repo',
+	'name' => 's3',
+	'directory' => $wgUploadDirectory,
+	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+	'urlbase' => $wgS3BaseUrl ? $wgS3BaseUrl : "",
+	'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
+	'thumbScriptUrl' => $wgThumbnailScriptPath,
+	'transformVia404' => !$wgGenerateThumbnailOnParse,
+	'initialCapital' => $wgCapitalLinks,
+	'deletedDir' => $wgUploadDirectory.'/deleted',
+	'deletedHashLevels' => $wgFileStore['deleted']['hash'],
+	'AWS_ACCESS_KEY' => getenv('AWS_ACCESS_KEY_ID'),
+	'AWS_SECRET_KEY' => getenv('AWS_SECRET_KEY'),
+	'AWS_S3_BUCKET' => $wgUploadS3Bucket,
+	'AWS_S3_PUBLIC' => $wgPublicS3,
+	'AWS_S3_SSL' => $wgUploadS3SSL
+);
+require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
+// s3 filesystem repo - end
+
+//HTMLets
+require_once("$IP/extensions/HTMLets/HTMLets.php");
+$wgHTMLetsDirectory = "$IP/htmlets";
+
+//FontAwesome
+require_once("$IP/extensions/FontAwesome/FontAwesome.php");

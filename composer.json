@@ -36,7 +36,13 @@
 		"wikimedia/utfnormal": "1.0.3",
 		"wikimedia/wrappedstring": "2.0.0",
 		"zordius/lightncandy": "0.21",
-		"easybib/composer-newrelic": "*"
+		"easybib/composer-newrelic": "*",
+		"ext-apcu": "*",
+		"ext-fileinfo": "*",
+		"ext-intl": "*",
+		"pear/mail": "*",
+		"pear/mail_mime-decode": "*",
+		"ext-mbstring": "*"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9",
