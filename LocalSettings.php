@@ -73,7 +73,7 @@ $wgUseImageMagick = true;
 $wgImageMagickConvertCommand = "/usr/bin/convert";
 
 # InstantCommons allows wiki to use images from https://commons.wikimedia.org
-$wgUseInstantCommons = false;
+$wgUseInstantCommons = true;
 
 ## If you use ImageMagick (or any other shell command) on a
 ## Linux server, this will need to be set to the name of an
@@ -204,8 +204,14 @@ $wgHTMLetsDirectory = "$IP/htmlets";
 //FontAwesome
 require_once("$IP/extensions/FontAwesome/FontAwesome.php");
 
-//Upload Wizard: https://www.mediawiki.org/wiki/Extension:UploadWizard
+//Upload Wizard
+//https://www.mediawiki.org/wiki/Extension:UploadWizard
 require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
+// $wgUploadNavigationUrl = '/wiki/Special:UploadWizard';
+$wgExtensionFunctions[] = function() {
+	$GLOBALS['wgUploadNavigationUrl'] = SpecialPage::getTitleFor( 'UploadWizard' )->getLocalURL();
+	return true;
+};
 $wgApiFrameOptions = 'SAMEORIGIN';
 $wgAllowCopyUploads = true;
 $wgGroupPermissions['user']['upload_by_url'] = true; // to allow for all registered users
