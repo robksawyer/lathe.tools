@@ -60,6 +60,7 @@ return array(
     'Composer\\Semver\\Constraint\\MultiConstraint' => $vendorDir . '/composer/semver/src/Constraint/MultiConstraint.php',
     'Composer\\Semver\\Semver' => $vendorDir . '/composer/semver/src/Semver.php',
     'Composer\\Semver\\VersionParser' => $vendorDir . '/composer/semver/src/VersionParser.php',
+    'EasyBib\\Composer\\NewRelic\\NewRelicPlugin' => $vendorDir . '/easybib/composer-newrelic/src/EasyBib/Composer/NewRelic/NewRelicPlugin.php',
     'ExampleClass' => $vendorDir . '/jakub-onderka/php-parallel-lint/tests/skip-on-5.3/class.php',
     'ExampleTrait' => $vendorDir . '/jakub-onderka/php-parallel-lint/tests/skip-on-5.3/trait.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',

@@ -1,12 +1,16 @@
 {
-	"name": "mediawiki/core",
-	"description": "Free software wiki application developed by the Wikimedia Foundation and others",
-	"keywords": ["mediawiki", "wiki"],
-	"homepage": "https://www.mediawiki.org/",
+	"name": "robksawyer/lathe-tools",
+	"description": "A wiki about lathes.",
+	"keywords": ["lathes", "tools"],
+	"homepage": "https://www.lathe.tools/",
 	"authors": [
 		{
 			"name": "MediaWiki Community",
 			"homepage": "https://www.mediawiki.org/wiki/Special:Version/Credits"
+		},
+		{
+			"name": "Rob Sawyer",
+			"homepage": "https://linkedin.com/u/robksawyer"
 		}
 	],
 	"license": "GPL-2.0+",
@@ -31,7 +35,8 @@
 		"wikimedia/ip-set": "1.0.1",
 		"wikimedia/utfnormal": "1.0.3",
 		"wikimedia/wrappedstring": "2.0.0",
-		"zordius/lightncandy": "0.21"
+		"zordius/lightncandy": "0.21",
+		"easybib/composer-newrelic": "*"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9",
@@ -55,6 +60,12 @@
 		"pear/mail_mime-decode": "Mail sending support",
 		"wikimedia/avro": "Binary serialization format used with kafka"
 	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/easybiblabs/composer-newrelic"
+		}
+	],
 	"autoload": {
 		"psr-0": {
 			"ComposerHookHandler": "includes/composer"

@@ -10,6 +10,7 @@ return array(
     'Liuggio' => array($vendorDir . '/liuggio/statsd-php-client/src'),
     'Less' => array($vendorDir . '/oyejorge/less.php/lib'),
     'Kafka\\' => array($vendorDir . '/nmred/kafka-php/src'),
+    'EasyBib\\Composer\\NewRelic\\' => array($vendorDir . '/easybib/composer-newrelic/src'),
     'ComposerHookHandler' => array($baseDir . '/includes/composer'),
     '' => array($vendorDir . '/cssjanus/cssjanus/src'),
 );

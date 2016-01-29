@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5d969a5f9ffc4727f0d3034545597f64",
-    "content-hash": "c567e098a46c830139db2c03efb5ac56",
+    "hash": "a0908f3e2fe3958d92103b66ca405bab",
+    "content-hash": "0917b1d8e4ca4e3163ed52f9938a89a5",
     "packages": [
         {
             "name": "composer/semver",
@@ -102,6 +102,57 @@
             ],
             "description": "Convert CSS stylesheets between left-to-right and right-to-left.",
             "time": "2014-11-14 20:00:50"
+        },
+        {
+            "name": "easybib/composer-newrelic",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/easybiblabs/composer-newrelic.git",
+                "reference": "045e05a37c6cde0945a54498f9ab57b7ccf44cbf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/easybiblabs/composer-newrelic/zipball/045e05a37c6cde0945a54498f9ab57b7ccf44cbf",
+                "reference": "045e05a37c6cde0945a54498f9ab57b7ccf44cbf",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "EasyBib\\Composer\\NewRelic\\NewRelicPlugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "EasyBib\\Composer\\NewRelic\\": "src/"
+                }
+            },
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Till Klampaeckel",
+                    "email": "till@php.net",
+                    "homepage": "http://till.klampaeckel.de/"
+                }
+            ],
+            "description": "A composer plugin that allows to tag composer runs in New Relic",
+            "keywords": [
+                "composer",
+                "composer-plugin",
+                "monitoring",
+                "newrelic",
+                "performance",
+                "plugin"
+            ],
+            "support": {
+                "source": "https://github.com/easybiblabs/composer-newrelic/tree/0.2.1",
+                "issues": "https://github.com/easybiblabs/composer-newrelic/issues"
+            },
+            "time": "2013-09-06 15:46:11"
         },
         {
             "name": "liuggio/statsd-php-client",

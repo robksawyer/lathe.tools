@@ -1550,5 +1550,58 @@
             "json",
             "schema"
         ]
+    },
+    {
+        "name": "easybib/composer-newrelic",
+        "version": "0.2.1",
+        "version_normalized": "0.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/easybiblabs/composer-newrelic.git",
+            "reference": "045e05a37c6cde0945a54498f9ab57b7ccf44cbf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/easybiblabs/composer-newrelic/zipball/045e05a37c6cde0945a54498f9ab57b7ccf44cbf",
+            "reference": "045e05a37c6cde0945a54498f9ab57b7ccf44cbf",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "1.0.0"
+        },
+        "time": "2013-09-06 15:46:11",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "EasyBib\\Composer\\NewRelic\\NewRelicPlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "EasyBib\\Composer\\NewRelic\\": "src/"
+            }
+        },
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Till Klampaeckel",
+                "email": "till@php.net",
+                "homepage": "http://till.klampaeckel.de/"
+            }
+        ],
+        "description": "A composer plugin that allows to tag composer runs in New Relic",
+        "keywords": [
+            "composer",
+            "composer-plugin",
+            "monitoring",
+            "newrelic",
+            "performance",
+            "plugin"
+        ],
+        "support": {
+            "source": "https://github.com/easybiblabs/composer-newrelic/tree/0.2.1",
+            "issues": "https://github.com/easybiblabs/composer-newrelic/issues"
+        }
     }
 ]
