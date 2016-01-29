@@ -11,4 +11,9 @@ return array(
     $vendorDir . '/phpunit/php-code-coverage',
     $vendorDir . '/phpunit/phpunit',
     $vendorDir . '/symfony/yaml',
+    $vendorDir . '/pear/pear_exception',
+    $vendorDir . '/pear/console_getopt',
+    $vendorDir . '/pear/pear-core-minimal/src',
+    $vendorDir . '/pear/mail',
+    $vendorDir . '/pear/mail_mime-decode',
 );
