@@ -1,0 +1,62 @@
+---
+# Configuration sample file for Jingo (YAML)
+# <%= ENV['FOOVAR'] %> to set Heroku environment variables
+application:
+  title: Lathe Tools
+  repository: 'https://github.com/robksawyer/lathe.tools'
+  docSubdir: ''
+  remote: ''
+  pushInterval: 30
+  secret: <%= ENV['APP_SECRET'] %>
+  git: git
+  skipGitCheck: false
+  loggingMode: 1
+  pedanticMarkdown: true
+  gfmBreaks: true
+  staticWhitelist: "/\\.png$/i, /\\.jpg$/i, /\\.gif$/i"
+  proxyPath: ''
+authentication:
+  google:
+    enabled: <%= ENV['AUTH_ENABLE_GOOGLE'] %>
+    clientId: <%= ENV['GOOGLE_CLIENT_ID'] %>
+    clientSecret: <%= ENV['GOOGLE_CLIENT_SECRET'] %>
+    redirectURL: ''
+  github:
+    enabled: <%= ENV['AUTH_ENABLE_GITHUB'] %>
+    clientId: <%= ENV['GITHUB_CLIENT_ID'] %>
+    clientSecret: <%= ENV['GOOGLE_CLIENT_SECRET'] %>
+    redirectURL: ''
+  local:
+    enabled: <%= ENV['AUTH_ENABLE_LOCAL'] %>
+    accounts:
+      - username: <%= ENV['LOCAL_USERNAME'] %>
+        passwordHash: <%= ENV['LOCAL_PASSWORD_HASH'] %>
+        email: <%= ENV['LOCAL_EMAIL'] %>
+features:
+  markitup: false
+  codemirror: true
+server:
+  hostname: localhost
+  port: <%= ENV['LOCAL_PORT'] %>
+  localOnly: false
+  baseUrl: ''
+  CORS:
+    enabled: false
+    allowedOrigin: '*'
+authorization:
+  anonRead: true
+  validMatches: .+
+  emptyEmailMatches: false
+pages:
+  index: Home
+  title:
+    fromFilename: true
+    fromContent: false
+    asciiOnly: false
+    lowercase: false
+  itemsPerPage: 10
+customizations:
+  sidebar: _sidebar.md
+  footer: _footer.md
+  style: _style.css
+  script: _script.js
