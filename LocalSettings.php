@@ -174,8 +174,13 @@ $wgUploadDirectory = getenv('UPLOAD_DIRECTORY');
 $wgUploadS3Bucket = getenv('S3_BUCKET_NAME');
 $wgUploadS3SSL = false; // true if SSL should be used
 $wgPublicS3 = true; // true if public, false if authentication should be used
+
 $wgS3BaseUrl = "http".($wgUploadS3SSL?"s":"")."://s3.amazonaws.com/$wgUploadS3Bucket";
-$wgUploadBaseUrl = "$wgS3BaseUrl/$wgUploadDirectory";
+
+//viewing needs a different url from uploading. Uploading doesnt work on the below url and viewing doesnt work on the above one.
+$wgS3BaseUrlView = "http".($wgUploadS3SSL?"s":"")."://".$wgUploadS3Bucket.".s3.amazonaws.com";
+$wgUploadBaseUrl = "$wgS3BaseUrlView/$wgUploadDirectory";
+
 // leave $wgCloudFrontUrl blank to not render images from CloudFront
 $wgCloudFrontUrl = "http".($wgUploadS3SSL?"s":"").'://'.getenv('CLOUDFRONT_SUBDOMAIN').'.cloudfront.net/';
 $wgLocalFileRepo = array(
@@ -195,7 +200,7 @@ $wgLocalFileRepo = array(
 	'AWS_S3_BUCKET' => $wgUploadS3Bucket,
 	'AWS_S3_PUBLIC' => $wgPublicS3,
 	'AWS_S3_SSL' => $wgUploadS3SSL,
-	'cloudFrontUrl' => $wgCloudFrontUrl,
+	'cloudFrontUrl' => $wgCloudFrontUrl
 );
 require_once("$IP/extensions/LocalS3Repo/LocalS3Repo.php");
 
