@@ -27,7 +27,7 @@
 		"oyejorge/less.php": "1.7.0.9",
 		"mediawiki/at-ease": "1.1.0",
 		"oojs/oojs-ui": "0.12.12",
-		"php": ">=5.3.3",
+		"php": "^5.6.0",
 		"psr/log": "1.0.0",
 		"wikimedia/assert": "0.2.2",
 		"wikimedia/cdb": "1.3.0",
@@ -97,7 +97,7 @@
 			"include": [
 				"composer.local.json"
 			],
-            "merge-dev": false
+			"merge-dev": false
 		}
 	}
 }
