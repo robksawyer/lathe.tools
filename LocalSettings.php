@@ -203,3 +203,13 @@ $wgHTMLetsDirectory = "$IP/htmlets";
 
 //FontAwesome
 require_once("$IP/extensions/FontAwesome/FontAwesome.php");
+
+//Upload Wizard: https://www.mediawiki.org/wiki/Extension:UploadWizard
+require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
+$wgApiFrameOptions = 'SAMEORIGIN';
+$wgAllowCopyUploads = true;
+$wgGroupPermissions['user']['upload_by_url'] = true; // to allow for all registered users
+$wgUploadWizardConfig = array(
+	'flickrApiUrl' => getenv('FLICKR_API_URL'),
+	'flickrApiKey' => getenv('FLICKR_API_KEY')
+);
