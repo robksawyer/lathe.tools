@@ -63,7 +63,6 @@ $wgDBmwschema = "mediawiki";
 
 ## Shared memory settings
 $wgMainCacheType = CACHE_ACCEL;
-$wgMemCachedServers = array( '' );
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
