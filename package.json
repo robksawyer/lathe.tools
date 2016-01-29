@@ -1,15 +1,12 @@
 {
-  "name": "jingo",
+  "name": "lathe.tools",
   "version": "1.6.1",
-  "description": "A nodejs based wiki engine",
-  "author": "Claudio Cicali <claudio.cicali@gmail.com>",
+  "description": "A wiki for lathes.",
+  "author": "Rob Sawyer <robksawyer@gmail.com>",
   "keywords": [
     "wiki",
-    "git",
-    "engine",
-    "gollum",
-    "cms",
-    "markdown"
+    "lathe",
+    "tools"
   ],
   "main": "jingo",
   "bin": {
@@ -62,8 +59,8 @@
     "start-dev": "nodemon ./jingo -c config.yaml"
   },
   "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
+    "node": ">=0.8.x",
+    "npm": ">=1.1.x"
   },
   "license": "MIT"
 }
