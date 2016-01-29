@@ -145,6 +145,28 @@ wfLoadExtension( 'WikiEditor' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+# Use sendgrid to send email
+require_once 'Mail.php';
+
+//Email
+// $wgSMTP = array(
+//  'host'     => "smtp.postmarkapp.com", 						// could also be an IP address. Where the SMTP server is located
+//  'IDHost'   => "lathe-tools.herokuapp.com",				// Generally this will be the domain name of your website (aka mywiki.org)
+//  'port'     => 25,																// Port to use when connecting to the SMTP server
+//  'auth'     => true,															// Should we use SMTP authentication (true or false)
+//  'username' => getenv('POSTMARK_API_TOKEN'),			// Username to use for SMTP authentication (if being used)
+//  'password' => getenv('POSTMARK_API_TOKEN')				// Password to use for SMTP authentication (if being used)
+// );
+$wgSMTP = array(
+	'host' => 'smtp.sendgrid.net',
+	'username' => getenv("SENDGRID_USERNAME"),
+	'password' => getenv("SENDGRID_PASSWORD"),
+	'IDHost' => 'heroku.com',
+	'port' => '587',
+	'auth' => true
+);
+
+
 // s3 filesystem repo
 $wgUploadDirectory = 'wiki-images';
 $wgUploadS3Bucket = getenv('S3_BUCKET_NAME');
@@ -179,13 +201,3 @@ $wgHTMLetsDirectory = "$IP/htmlets";
 
 //FontAwesome
 require_once("$IP/extensions/FontAwesome/FontAwesome.php");
-
-//Email
-$wgSMTP = array(
- 'host'     => "smtp.postmarkapp.com", 						// could also be an IP address. Where the SMTP server is located
- 'IDHost'   => "lathe-tools.herokuapp.com",				// Generally this will be the domain name of your website (aka mywiki.org)
- 'port'     => 25,																// Port to use when connecting to the SMTP server
- 'auth'     => true,															// Should we use SMTP authentication (true or false)
- 'username' => getenv('POSTMARK_API_TOKEN'),			// Username to use for SMTP authentication (if being used)
- 'password' => getenv('POSTMARK_API_TOKEN')				// Password to use for SMTP authentication (if being used)
-);
