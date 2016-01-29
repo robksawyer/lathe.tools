@@ -43,7 +43,8 @@
 		"pear/mail": "*",
 		"pear/mail_mime-decode": "*",
 		"ext-mbstring": "*",
-		"wildbit/postmark-php": "^2.1"
+		"wildbit/postmark-php": "^2.1",
+		"composer-plugin-api": "^1.0"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9",
