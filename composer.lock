@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ad43d62f67d084f7c29eaebb9cb23c2",
-    "content-hash": "f0565eb18c9a37d72930250c0391e7e9",
+    "hash": "63ead3604bfd5eb30d58c2208f9fed5f",
+    "content-hash": "c72d3d7693b80fb18152b9ffa45a27f4",
     "packages": [
         {
             "name": "composer/semver",
@@ -702,6 +702,119 @@
             ],
             "description": "More info available on: http://pear.php.net/package/Mail_mimeDecode",
             "time": "2014-04-15 19:29:16"
+        },
+        {
+            "name": "pear/net_smtp",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/Net_SMTP.git",
+                "reference": "cf7e1bac4cdd38f3260e5c10d5ae366b7e22794c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/Net_SMTP/zipball/cf7e1bac4cdd38f3260e5c10d5ae366b7e22794c",
+                "reference": "cf7e1bac4cdd38f3260e5c10d5ae366b7e22794c",
+                "shasum": ""
+            },
+            "require": {
+                "pear/net_socket": "*",
+                "pear/pear-core-minimal": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "pear/auth_sasl": "Install optionally via your project's composer.json"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Net": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "./"
+            ],
+            "license": [
+                "PHP License"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Parise",
+                    "email": "jon@php.net",
+                    "homepage": "http://www.indelible.org",
+                    "role": "Lead"
+                },
+                {
+                    "name": "Chuck Hagenbuch",
+                    "email": "chuck@horde.org",
+                    "role": "Lead"
+                }
+            ],
+            "description": "An implementation of the SMTP protocol",
+            "homepage": "http://pear.github.io/Net_SMTP/",
+            "keywords": [
+                "email",
+                "mail",
+                "smtp"
+            ],
+            "time": "2015-09-07 17:04:16"
+        },
+        {
+            "name": "pear/net_socket",
+            "version": "1.0.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/Net_Socket.git",
+                "reference": "fcd33efd77e4b35ce85489141ab9145343579fe8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/Net_Socket/zipball/fcd33efd77e4b35ce85489141ab9145343579fe8",
+                "reference": "fcd33efd77e4b35ce85489141ab9145343579fe8",
+                "shasum": ""
+            },
+            "require": {
+                "pear/pear_exception": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Net": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "./"
+            ],
+            "license": [
+                "PHP License"
+            ],
+            "authors": [
+                {
+                    "name": "Chuck Hagenbuch",
+                    "email": "chuck@horde.org",
+                    "role": "Lead"
+                },
+                {
+                    "name": "Aleksander Machniak",
+                    "email": "alec@php.net",
+                    "role": "Lead"
+                },
+                {
+                    "name": "Stig Bakken",
+                    "email": "stig@php.net",
+                    "role": "Lead"
+                }
+            ],
+            "description": "More info available on: http://pear.php.net/package/Net_Socket",
+            "time": "2014-02-20 19:27:06"
         },
         {
             "name": "pear/pear-core-minimal",
