@@ -234,3 +234,7 @@ require_once("$IP/extensions/FontAwesome/FontAwesome.php");
 require_once "$IP/extensions/AddThis/AddThis.php";
 $wgAddThisHeader = true;
 $wgAddThispubid = getenv('ADD_THIS_KEY');
+
+//Fancy thumbs
+require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
+//$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';
