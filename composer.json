@@ -45,7 +45,8 @@
 		"ext-mbstring": "*",
 		"wildbit/postmark-php": "^2.1",
 		"composer-plugin-api": "^1.0",
-		"pear/Net_SMTP": "^1.7"
+		"pear/Net_SMTP": "^1.7",
+		"mediawiki/maps": "*"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9",

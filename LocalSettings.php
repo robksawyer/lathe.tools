@@ -228,3 +228,9 @@ require_once("$IP/extensions/FontAwesome/FontAwesome.php");
 // 	'flickrApiUrl' => getenv('FLICKR_API_URL'),
 // 	'flickrApiKey' => getenv('FLICKR_API_KEY')
 // );
+
+//Social Sharing
+//https://www.mediawiki.org/wiki/Extension:AddThis
+require_once "$IP/extensions/AddThis/AddThis.php";
+$wgAddThisHeader = true;
+$wgAddThispubid = getenv('ADD_THIS_KEY');
